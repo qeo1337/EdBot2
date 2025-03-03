@@ -10,7 +10,7 @@ from datetime import datetime
 import threading
 import time
 # Токен вашего Telegram бота
-TOKEN = '6753326373:AAHgglAIYrg_jJe4RCEoFzw2Y93S9IIDLXI'  # Замените на ваш токен бота
+TOKEN = '6753326373:AAHgglAIYrg_jJe4RCEoFzw2Y93S9IIDLXI'  
 bot = telebot.TeleBot(TOKEN)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 AUTHORIZED_USERS = ['qeo13378', 'y-a-varfolome', 'natanikitenko', 'mozgovaya31', 'eka-n-berezi', 'e-shchanova', 'irina-san1995', 'e-e-stasyuk', 'yanchy', 'y-a-varfolome', 'sashafursova', 'anbelskya']
@@ -24,10 +24,8 @@ skip_keywords = ['Команда мечты',
     'Группа сопровождения найма',
     'Наставничество'
 ]
-# Путь к вашему JSON файлу с учетными данными
-CREDENTIALS_FILE = 'E:\\Новая папка (2)\\true-server-424707-i3-d86c854f72f5.json'  # Замените на путь к вашему JSON файлу
+CREDENTIALS_FILE = 'E:\\Новая папка (2)\\true-server-424707-i3-d86c854f72f5.json'  
 
-# URL вашей Google Таблицы
 SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1K78LBzr1pgEvMSdmMUgMWkvXCMaigmW9cqqNR8OL6FA/edit?usp=sharing'
 
 # Настраиваем соединение с Google Таблицами
@@ -146,7 +144,6 @@ def create_tables():
     conn.close()
 
 
-# Обработчик кнопки "Задачи"
 # Обработчик кнопки "Задачи"
 @bot.message_handler(func=lambda message: message.text == 'Задачи')
 def tasks_menu(message):
